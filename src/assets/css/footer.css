@@ -1,0 +1,51 @@
+.footer {
+    background: #006e6d; /* Match the background color */
+    color: white;
+  }
+  
+  .footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+  
+  .footer-link {
+    color: #ffffffb3; /* Lighter white for links */
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer-link:hover {
+    color: #ffffff; /* Bright white on hover */
+    text-decoration: underline;
+  }
+  
+  .footer .social-icons {
+    margin-top: 1rem;
+  }
+  
+  .footer .social-icon {
+    display: inline-block;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer .social-icon:hover {
+    color: #00ffd0; /* Bright teal hover effect */
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+  
+    .footer .social-icon {
+      margin-right: 1rem;
+    }
+  }
+  

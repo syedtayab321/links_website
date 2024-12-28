@@ -1,0 +1,43 @@
+.hero-section {
+    background-image: url("./../images/backround.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 0;
+    color: rgb(255, 255, 255);
+  }
+  .main-container .navbar {
+    background-color:rgb(135, 241, 253) ;
+  }
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  }
+  
+  .hero-section .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+  
+  .hero-section .btn {
+    font-size: 1.1rem;
+  }
+  
+  .navbar .logo {
+    height: 40px; /* Adjust logo size */
+  }
+  

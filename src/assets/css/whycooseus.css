@@ -1,0 +1,33 @@
+.whychooseus{
+  background-color:  #006e6d;
+  width: 100%!important;
+  margin: 0%!important;
+  padding: 10px;
+}
+.whychooseus .card {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .whychooseus  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .whychooseus  .card h5 {
+    color: #1f8eb7;
+  }
+  
+  .whychooseus .card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .whychooseus  .text-center {
+      padding: 0 10px;
+    }
+  }
+  
