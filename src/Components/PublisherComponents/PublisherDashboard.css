@@ -1,0 +1,33 @@
+.publisher-dashboard {
+  padding: 20px;
+  background-color: #f1f3f4;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  color: #495057;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dashboard-sections {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dashboard-card {
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard-card h2 {
+  font-size: 20px;
+  color: #28a745;
+}

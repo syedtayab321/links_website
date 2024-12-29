@@ -1,6 +1,6 @@
 import React from "react";
-import "./../../assets/css/about.css";
-import Image from './../../assets/images/backround.jpg';
+import "../../assets/css/about.css";
+import Image from '../../assets/images/backround.jpg';
 const About = () => {
   return (
     <div className="about-page">
