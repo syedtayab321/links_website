@@ -1,0 +1,26 @@
+.manage-payments-container {
+  padding: 20px;
+}
+
+.manage-payments-container .ant-card {
+  background-color: #f9f9f9;
+}
+
+.manage-payments-container .ant-table-thead > tr > th {
+  background-color: #1890ff;
+  color: white;
+}
+
+.manage-payments-container .ant-btn-primary {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+.manage-payments-container .ant-btn-default {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.manage-payments-container .ant-table-row:hover {
+  background-color: #e6f7ff;
+}

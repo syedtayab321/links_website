@@ -5,8 +5,8 @@ import '../css/Publishersidebar.css';
 const navitems = [
   { text: 'List Websites', icon: <FaHome />, link: "list-websites" },
   { text: 'Manage Tasks', icon: <FaProjectDiagram />, link: "manage-tasks" },
-  { text: 'Performance Analytics', icon: <FaUserAlt />, link: "performance-analytics" },
-  { text: 'View Requests', icon: <FaUsers />, link: "requests" },
+  { text: 'Analytics', icon: <FaUserAlt />, link: "performance-analytics" },
+  { text: 'Bulk Uploader', icon: <FaUsers />, link: "bulk-uploader" },
   { text: 'Orders Management', icon: <FaProjectDiagram />, link: "orders" },
   { text: 'Messages', icon: <FaStar />, link: "messages" },
   { text: 'Profile', icon: <FaBars />, link: "profile" },

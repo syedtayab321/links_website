@@ -10,6 +10,12 @@ import Login from "./Components/CommonComponents/Login";
 import PublisherDashboard from "./PublisherPortal/PublisherDashboard";
 import ForgotPassword from "./Components/CommonComponents/ForgotPassword";
 import EmailConfirmation from "./Components/CommonComponents/EmailConfirmation";
+import BuyerDashboard from "./BuyerPortal/BuyerDashboard";
+import BuyerWebsiteListings from "./BuyerPortal/BuyerPages/BuyerWebsiteListing";
+import LinkInsertion from "./BuyerPortal/BuyerPages/LinkInsertion";
+import BuyerOrderDetails from "./BuyerPortal/BuyerPages/BuyerOrders";
+import BuyerManagePayments from "./BuyerPortal/BuyerPages/BuyerManagePayments";
+import BuyerProfile from "./BuyerPortal/BuyerPages/BuyerProfile";
 
 
 function App() {
@@ -31,10 +37,15 @@ function App() {
                       ) : (
                         <PublisherRegistration onBack={() => setUserType(null)} />
                       )}/>
-                {/*<Route  path='/buyerdashboard' element={<BuyerDashboard/>}/>*/}
+                <Route  path='/buyerdashboard' element={<BuyerDashboard/>}/>
                 <Route  path='/publisherdashboard' element={<PublisherDashboard/>}/>
                 <Route path = '/forgot-password' element = {<ForgotPassword/>}/>
                 <Route path = '/confirmation' element = {<EmailConfirmation/>}/>
+                <Route path = '/buyer-listing' element = {<BuyerWebsiteListings/>}/>
+                <Route path = '/link-insertion' element = {<LinkInsertion/>}/>
+                <Route path = '/buyer-orders' element = {<BuyerOrderDetails/>}/>
+                <Route path='/buyer-payments'  element={<BuyerManagePayments/>} />
+                <Route path='/buyer-profile' element={<BuyerProfile/>} />
             </Routes>
       </>
   );

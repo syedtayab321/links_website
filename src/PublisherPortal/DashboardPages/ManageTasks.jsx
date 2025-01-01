@@ -1,60 +1,116 @@
-import React from "react";
-import { Tabs, Badge } from "antd";
-import "./../css/managetask.css";
+import React, { useState } from "react";
+import { Card, Row, Col, Badge, Button, Modal } from "antd";
+import { BellOutlined } from "@ant-design/icons";
+import './../css/managetask.css';
 
-const ManageTasks = () => {
+const TaskManagement = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedTask, setSelectedTask] = useState(null);
+
   const tasks = {
     received: [
-      { title: "Task 1: Content Review" },
-      { title: "Task 2: Keyword Optimization" },
+      { id: 1, title: "Task 1", description: "Description of Task 1", status: "Received" },
+      { id: 2, title: "Task 2", description: "Description of Task 2", status: "Received" },
     ],
-    ongoing: [{ title: "Task 3: Link Building" }],
-    completed: [{ title: "Task 4: Meta Tag Update" }],
+    ongoing: [
+      { id: 3, title: "Task 3", description: "Description of Task 3", status: "Ongoing" },
+    ],
+    completed: [
+      { id: 4, title: "Task 4", description: "Description of Task 4", status: "Completed" },
+    ],
   };
 
-  const renderTasks = (taskList) =>
-    taskList.map((task, index) => (
-      <div key={index} className="task-item">
-        <span className="task-title">{task.title}</span>
-      </div>
-    ));
+  const showTaskDetails = (task) => {
+    setSelectedTask(task);
+    setModalVisible(true);
+  };
 
-  const tabItems = [
-    {
-      label: (
-        <span>
-          Received <Badge count={tasks.received.length} className="custom-badge" />
-        </span>
-      ),
-      key: "1",
-      children: <div className="tasks-container">{renderTasks(tasks.received)}</div>,
-    },
-    {
-      label: (
-        <span>
-          Ongoing <Badge count={tasks.ongoing.length} className="custom-badge" />
-        </span>
-      ),
-      key: "2",
-      children: <div className="tasks-container">{renderTasks(tasks.ongoing)}</div>,
-    },
-    {
-      label: (
-        <span>
-          Completed <Badge count={tasks.completed.length} className="custom-badge" />
-        </span>
-      ),
-      key: "3",
-      children: <div className="tasks-container">{renderTasks(tasks.completed)}</div>,
-    },
-  ];
+  const handleModalClose = () => {
+    setModalVisible(false);
+  };
 
   return (
-    <div className="container mt-5 manage-tasks">
-      <h2 className="tasks-header">Manage Tasks</h2>
-      <Tabs defaultActiveKey="1" items={tabItems} className="tasks-tabs" />
+    <div className="task-management-page">
+      <h2 className="page-title">Task Management</h2>
+
+      <Row gutter={[16, 16]} justify="space-between">
+        {/* Received Tasks */}
+        <Col xs={24} sm={12} md={8}>
+          <Card title="Received Tasks" className="task-card">
+            {tasks.received.map((task) => (
+              <Card.Grid key={task.id} className="task-item">
+                <div className='task-text'>
+                  <h3>{task.title}</h3>
+                  <p>{task.description}</p>
+                </div>
+                <div className='task-btn'>
+                  <Button type="link" onClick={() => showTaskDetails(task)}>
+                    View Details
+                  </Button>
+                </div>
+              </Card.Grid>
+            ))}
+          </Card>
+        </Col>
+
+        {/* Ongoing Tasks */}
+        <Col xs={24} sm={12} md={8}>
+          <Card title="Ongoing Tasks" className="task-card">
+            {tasks.ongoing.map((task) => (
+              <Card.Grid key={task.id} className="task-item">
+                <div className='task-text'>
+                  <h3>{task.title}</h3>
+                  <p>{task.description}</p>
+                </div>
+                <div className='task-btn'>
+                  <Button type="link" onClick={() => showTaskDetails(task)}>
+                  View Details
+                </Button>
+                </div>
+              </Card.Grid>
+            ))}
+          </Card>
+        </Col>
+
+        {/* Completed Tasks */}
+        <Col xs={24} sm={12} md={8}>
+          <Card title="Completed Tasks" className="task-card">
+            {tasks.completed.map((task) => (
+              <Card.Grid key={task.id} className="task-item">
+                <div className='task-text'>
+                  <h3>{task.title}</h3>
+                  <p>{task.description}</p>
+                </div>
+                <div className='task-btn'>
+                  <Button type="link" onClick={() => showTaskDetails(task)}>
+                    View Details
+                  </Button>
+                </div>
+              </Card.Grid>
+            ))}
+          </Card>
+        </Col>
+      </Row>
+
+      {/* Task Details Modal */}
+      {selectedTask && (
+        <Modal
+          title={selectedTask.title}
+          visible={modalVisible}
+          onCancel={handleModalClose}
+          footer={[
+            <Button key="close" onClick={handleModalClose}>
+              Close
+            </Button>,
+          ]}
+        >
+          <h3>Description:</h3>
+          <p>{selectedTask.description}</p>
+          <h3>Status: {selectedTask.status}</h3>
+        </Modal>
+      )}
     </div>
   );
 };
 
-export default ManageTasks;
+export default TaskManagement;

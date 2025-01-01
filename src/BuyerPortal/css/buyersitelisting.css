@@ -1,0 +1,48 @@
+.listings-container {
+  padding: 20px;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.listings-container h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+.listings-container .card {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.listings-container .card:hover {
+  transform: scale(1.05);
+}
+
+.listings-container .card h5 {
+  font-weight: bold;
+  color: #000;
+}
+
+.listings-container .card p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.listings-container button {
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+.listings-container .form-select {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .listings-container {
+    padding: 10px;
+  }
+
+  .listings-container h2 {
+    font-size: 1.5rem;
+  }
+}

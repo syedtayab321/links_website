@@ -1,59 +1,78 @@
-.manage-tasks {
-  background: #f8f9fa;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+.task-management-page {
   padding: 20px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  min-width: 100%;
 }
-.tasks-header {
+
+.task-management-page .page-title {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.task-management-page .task-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  display: flex!important;
+  flex-direction: column!important;
+  align-content: center;
+}
+
+.task-management-page .task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.task-management-page .task-item {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 3px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  display: flex!important;
+  width: 95%;
+}
+.task-management-page .task-item .task-text{
+     display: flex!important;
+     flex-direction: column;
+}
+.task-management-page .task-item:hover {
+  background-color: #e6f7ff;
+}
+.task-management-page .notification-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.task-management-page .ant-modal-title {
   font-size: 24px;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.tasks-tabs .ant-tabs-nav {
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
-.tasks-tabs .ant-tabs-tab {
+.task-management-page .ant-modal-body {
   font-size: 16px;
-  font-weight: 500;
-  color: #007bff;
-  padding: 10px 15px;
 }
+@media (max-width: 768px) {
+   .task-management-page {
+    padding: 10px;
+  }
 
-.tasks-tabs .ant-tabs-tab-active {
-  border-color: #007bff !important;
-}
+  .task-management-page .task-card {
+    margin-bottom: 15px;
+  }
 
-.tasks-tabs .custom-badge {
-  color: white !important;
-  font-weight: 500;
-}
-.tasks-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  .task-management-page .page-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 
-.task-item {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  padding: 10px 15px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.task-item:hover {
-  background: #f7f9fc;
-}
-
-.task-title {
-  font-size: 16px;
-  font-weight: 500;
-  color: #333;
+ .task-management-page .task-item {
+    padding: 15px;
+  }
 }

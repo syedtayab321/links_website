@@ -1,18 +1,9 @@
 import React, { useRef, useEffect } from "react";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
 import { Row, Col, Card, Statistic, Table } from "antd";
+import {Chart as ChartJS, CategoryScale, LinearScale, BarElement, BarController, ArcElement,PieController, Title, Tooltip, Legend,} from "chart.js";
 
-// Register required Chart.js components
-ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, BarController, ArcElement, PieController,Title, Tooltip, Legend );
+
 
 const PerformanceAnalytics = () => {
   const barChartRef = useRef(null);
@@ -20,11 +11,11 @@ const PerformanceAnalytics = () => {
   const barChartInstance = useRef(null);
   const pieChartInstance = useRef(null);
 
-  useEffect(() => {
-    const barCtx = barChartRef.current.getContext("2d");
-    const pieCtx = pieChartRef.current.getContext("2d");
+useEffect(() => {
+  const barCtx = barChartRef.current?.getContext("2d");
+  const pieCtx = pieChartRef.current?.getContext("2d");
 
-    // Destroy existing bar chart instance
+  if (barCtx) {
     if (barChartInstance.current) {
       barChartInstance.current.destroy();
     }
@@ -53,8 +44,9 @@ const PerformanceAnalytics = () => {
         },
       },
     });
+  }
 
-    // Destroy existing pie chart instance
+  if (pieCtx) {
     if (pieChartInstance.current) {
       pieChartInstance.current.destroy();
     }
@@ -89,13 +81,14 @@ const PerformanceAnalytics = () => {
         },
       },
     });
+  }
 
-    // Cleanup on unmount
-    return () => {
-      if (barChartInstance.current) barChartInstance.current.destroy();
-      if (pieChartInstance.current) pieChartInstance.current.destroy();
-    };
-  }, []);
+  return () => {
+    if (barChartInstance.current) barChartInstance.current.destroy();
+    if (pieChartInstance.current) pieChartInstance.current.destroy();
+  };
+}, []);
+
 
   const columns = [
     { title: "Month", dataIndex: "month", key: "month" },

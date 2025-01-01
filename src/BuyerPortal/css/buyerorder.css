@@ -1,0 +1,49 @@
+.order-details-container {
+  padding: 20px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+.order-details-container .card {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.order-details-container .ant-card-body {
+  padding: 16px;
+}
+
+.order-details-container .ant-table {
+  margin-top: 10px;
+}
+
+.order-details-container .ant-table-tbody > tr > td {
+  font-size: 14px;
+}
+
+.order-details-container button {
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+.order-details-container .ant-card-meta-description {
+  font-size: 16px;
+}
+
+.order-details-container .ant-progress {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .order-details-container {
+    padding: 10px;
+  }
+
+  .order-details-container .card {
+    margin-bottom: 10px;
+  }
+
+  .order-details-container .ant-table {
+    font-size: 12px;
+  }
+}

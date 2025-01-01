@@ -1,0 +1,91 @@
+.buyer-dashboard-container {
+  background-color: #f0f2f5;
+  min-width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.buyer-dashboard-container .dashboard-header {
+  margin-bottom: 30px;
+}
+
+.buyer-dashboard-container .dashboard-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
+}
+
+.buyer-dashboard-container .dashboard-card img {
+  border-radius: 10px;
+}
+
+.buyer-dashboard-container .dashboard-card .ant-card-meta-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.buyer-dashboard-container .dashboard-card .ant-card-meta-description {
+  color: #7a7a7a;
+}
+
+.buyer-dashboard-container .company-details-card, .special-offers-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buyer-dashboard-container .company-details-card .ant-card-body,
+.buyer-dashboard-container .special-offers-card .ant-card-body {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.buyer-dashboard-container .company-details-card .ant-card-body h4,
+.buyer-dashboard-container .special-offers-card .ant-card-body h4 {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.buyer-dashboard-container .company-details-card .ant-card-body p,
+.buyer-dashboard-container .special-offers-card .ant-card-body p {
+  color: #666;
+}
+
+.buyer-dashboard-container  .company-details-card .ant-btn-link,
+.buyer-dashboard-container  .special-offers-card .ant-btn-link {
+  font-size: 1rem;
+  color: #1890ff;
+}
+
+.buyer-dashboard-container  .mt-2 {
+  margin-top: 12px;
+}
+
+.buyer-dashboard-container  .text-center {
+  text-align: center;
+}
+
+.buyer-dashboard-container  .ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.buyer-dashboard-container .ant-btn-default {
+  background-color: #ffec3d;
+  border-color: #ffec3d;
+}
+
+.buyer-dashboard-container .ant-btn-success {
+  background-color: #52c41a;
+  border-color: #52c41a;
+}
+
+.buyer-dashboard-container .ant-btn-danger {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.buyer-dashboard-container .ant-card-meta-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,46 @@
+.profile-layout {
+  background-color: #f7f7f7;
+}
+
+.profile-header {
+  margin-bottom: 30px;
+}
+
+.profile-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+  margin-bottom: 20px;
+  background-color: #87d068;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.profile-email {
+  color: #888;
+}
+
+.profile-layout .contact-card {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-layout .contact-card .ant-descriptions-item-label {
+  font-weight: bold;
+}
+
+.profile-layout .mt-2 {
+  margin-top: 16px;
+}
+
+.profile-layout .mt-3 {
+  margin-top: 24px;
+}

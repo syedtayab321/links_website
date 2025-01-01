@@ -1,0 +1,48 @@
+.link-insertion-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.link-insertion-container h2, .link-insertion-container h3 {
+  font-weight: bold;
+  color: #333;
+}
+
+.link-insertion-container .card {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.link-insertion-container .card:hover {
+  transform: scale(1.05);
+}
+
+.link-insertion-container .card h5 {
+  font-weight: bold;
+  color: #000;
+}
+
+.link-insertion-container .card p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.link-insertion-container button {
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+.link-insertion-container .form-control {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .link-insertion-container {
+    padding: 10px;
+  }
+
+  .link-insertion-container h2,.link-insertion-container h3 {
+    font-size: 1.5rem;
+  }
+}
