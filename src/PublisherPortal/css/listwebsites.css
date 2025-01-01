@@ -1,0 +1,77 @@
+.list-website-container {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-width: 100%;
+  z-index: 20;
+}
+
+/* Header styling */
+.list-websites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-websites-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.list-website-container  .search-input {
+  width: 300px;
+  border-radius: 25px !important;
+}
+
+/* Table styling */
+.website-table {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.list-website-container  .ant-table-thead > tr > th {
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.list-website-container  .ant-table-tbody > tr > td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Button styling */
+.list-website-container .btn-meta,
+.list-website-container .btn-txt {
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+
+.list-website-container .btn-meta {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.list-website-container .btn-txt {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.list-website-container .btn-meta:hover,
+.list-website-container .btn-txt:hover {
+  opacity: 0.9;
+}
+
+.list-website-container .btn-view-details {
+  font-weight: bold;
+  color: #007bff !important;
+}

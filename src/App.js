@@ -7,8 +7,7 @@ import {useState} from "react";
 import BuyerRegistration from "./Components/Registration/BuyerRegistrationForm";
 import PublisherRegistration from "./Components/Registration/PublisherRegistrationForm";
 import Login from "./Components/CommonComponents/Login";
-import BuyerDashboard from "./Components/BuyerComponents/BuyerDashboard";
-import PublisherDashboard from "./Components/PublisherComponents/PublisherDashboard";
+import PublisherDashboard from "./PublisherPortal/PublisherDashboard";
 import ForgotPassword from "./Components/CommonComponents/ForgotPassword";
 import EmailConfirmation from "./Components/CommonComponents/EmailConfirmation";
 
@@ -32,7 +31,7 @@ function App() {
                       ) : (
                         <PublisherRegistration onBack={() => setUserType(null)} />
                       )}/>
-                <Route  path='/buyerdashboard' element={<BuyerDashboard/>}/>
+                {/*<Route  path='/buyerdashboard' element={<BuyerDashboard/>}/>*/}
                 <Route  path='/publisherdashboard' element={<PublisherDashboard/>}/>
                 <Route path = '/forgot-password' element = {<ForgotPassword/>}/>
                 <Route path = '/confirmation' element = {<EmailConfirmation/>}/>

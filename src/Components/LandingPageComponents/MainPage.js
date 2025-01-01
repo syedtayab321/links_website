@@ -1,5 +1,6 @@
 import React from "react";
 import './../../assets/css/mainpage.css';
+import {Link} from "react-router";
 const MainPage = () => {
   return (
       <>
@@ -12,7 +13,7 @@ const MainPage = () => {
           <p>
             Explore our features and services tailored for publishers and buyers.
           </p>
-          <button className="btn btn-primary">Let's Get Started</button>
+          <Link className="btn btn-primary" to='/publisherdashboard'>Let's Get Started</Link>
         </div>
       </div>
     </div>

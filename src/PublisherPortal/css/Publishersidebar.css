@@ -1,0 +1,31 @@
+.publisher-menu{
+    margin-top:6px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.publisher-menu .publisher-menu-items{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 10px 10px;
+    background-color: #010a27;
+    border-radius: 10px;
+    cursor: pointer;
+    border:2px solid #010a27;
+}
+
+.publisher-menu .publisher-menu-items span{
+    color: white;
+    margin-left: 15px;
+    font-size: 14px;
+}
+.publisher-menu .publisher-menu-items:hover{
+    background-color: #15058c;
+}
+.publisher-sidebar .activelink{
+  background-color: #0c01b8;
+}

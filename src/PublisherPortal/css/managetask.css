@@ -1,0 +1,59 @@
+.manage-tasks {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.tasks-header {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tasks-tabs .ant-tabs-nav {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tasks-tabs .ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 500;
+  color: #007bff;
+  padding: 10px 15px;
+}
+
+.tasks-tabs .ant-tabs-tab-active {
+  border-color: #007bff !important;
+}
+
+.tasks-tabs .custom-badge {
+  color: white !important;
+  font-weight: 500;
+}
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item:hover {
+  background: #f7f9fc;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
