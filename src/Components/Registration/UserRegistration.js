@@ -1,10 +1,13 @@
 import React from 'react';
 import './registration.css';
 import { FaUserTie, FaBriefcase } from 'react-icons/fa';
+import Navbar from "../CommonComponents/Navbar";
 
 const UserTypeSelection = ({ onSelectUserType }) => {
   return (
-    <div className="user-type-container">
+    <>
+       <Navbar/>
+       <div className="user-type-container">
       <h2>Select Your Role</h2>
       <div className="role-selection">
         <div
@@ -29,6 +32,7 @@ const UserTypeSelection = ({ onSelectUserType }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -12,7 +12,6 @@ const Login = () => {
 
     try {
       const response = await axiosInstance.post('login/', { email, password });
-      // Redirect or handle success
       console.log('Logged in successfully', response);
       setErrorMessage('');
     } catch (error) {
